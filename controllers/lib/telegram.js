@@ -14,7 +14,7 @@ const handleMessage = async(messageObj) => {
     const messageText = messageObj.text || ''
 
     // check if user chat message relevant for ad
-    const checkIfAdFit = await sendPrompt(messageText, 'Please decide if the message text I sent indicating that the user is interested in buying/finding/searching product(s) from Indonesia, promoting product(s) from Indonesia, or interested in buying from these Indonesian marketplace: Tokopedia, Orami, Shopee, Bukalapak, Lazada, Blibli, Carousell, and many more. Please make sure to include Indonesian brands or any product that come from Indonesia. You need to only reply with True if the indication is yes, and False if the indication is false.')
+    const checkIfAdFit = await sendPrompt(messageText, 'Please decide if the message text I sent indicating that the user is interested in buying/finding/searching product(s) from Indonesia, promoting product(s) from Indonesia, or interested in buying from these Indonesian marketplace: Tokopedia, Orami, Shopee, Bukalapak, Lazada, Blibli, Carousell, and many more. Please make sure to include Indonesian brands or any product that come from Indonesia. You need to only reply with True if the indication is true, and False if the indication is false.')
 
     if(checkIfAdFit == 'True') {
         // make an ad
